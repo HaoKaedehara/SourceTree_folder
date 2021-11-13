@@ -1,0 +1,128 @@
+/* reset CSS */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    
+    background-repeat: none;
+    background-size: cover;
+    height: 1200px;
+    width: 100%;
+    background-position: center center;
+    background-image: url(http://s1.picswalls.com/wallpapers/2014/07/25/japan-desktop-background_04325889_108.jpg);
+}
+.box{
+    max-width: 800px;
+    background-color: white;
+    margin: 30px auto;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%) ;
+    border-radius: 10px;
+    padding: 20px 40px;
+    display: flex;
+    /* gán kích thước  */
+}
+.col-1{
+    width: 65%;
+    padding-right: 10px;
+}
+.col-1 > h1 {
+    color: royalblue;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.col-1 > p {
+    color: #212529;
+    margin-bottom: 12px;
+    margin-top: 12px;
+    text-align: justify;
+}
+.col-2{
+    width: 35%;
+}
+img.doraemon{
+    width: 100%;
+    /* mẹo ảnh đặt ở giữa */
+    height: 100%;
+    object-fit: contain;
+}
+/* break-point */
+@media screen and (max-width: 600px) {
+    .box{
+        flex-wrap: wrap;
+        /* dùng wrap khi cha của thẻ có flex - cả một bầu trời kiến thức */ 
+    }
+    .col-1{
+        order: 2;
+        width: 100%;
+    }
+    .col-2{
+        order: 1;
+        width: 100%;
+    }
+}
+/*  */
+#menu{
+    padding-left: 20px;
+}
+#menu ul{
+    background: #8ad385;
+    width: 250px;
+    padding: 0;
+    list-style-type: none;
+
+}
+#menu ul li{
+    width: auto;
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px solid #e8e8e8;
+    padding: 0 1em; border-bottom: tomato;
+    position: relative; 
+}
+
+#menu ul li a{
+    padding-left: 15px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    display: block;
+}
+#menu ul li a:hover{
+    padding-right: 10px;
+    color: lightcoral;
+    font-size: 17px;
+}
+
+#menu ul li:hover{
+    width: 225px;
+    background: #CDE2CD;
+    transition: all ease-in-out 0.2s;
+    padding-left: 10px;
+}
+#menu .sub-menu{
+    position: relative;
+    left: 250px;
+    top: 0;
+    display: none;
+}
+#menu ul li:hover .sub-menu{
+    display: block;
+    margin-right: 10px;
+    position:-webkit-sticky;
+    position: absolute;
+}
+
+#menu li ul li ul{
+    display: none;position: -webkit-sticky;
+    background-color: aqua;
+    position: relative;
+}
+#menu li ul li:hover ul{
+    display: block;
+    
+    position: relative;
+}
+/*  */
